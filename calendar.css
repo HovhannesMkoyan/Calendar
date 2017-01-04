@@ -1,0 +1,205 @@
+html, body {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+body {
+    font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    background-color: lightgrey;
+}
+
+.calendar-container {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 500px;
+    height: 523px;
+    box-shadow: 0px 5px 10px grey;
+    transition: all .1s linear;
+}
+
+/*************************************** CALENDAR HEADER ****************************************/
+.calendar-header {
+    width: 100%;
+    height: 70px;
+    position: relative;
+    line-height: 70px;
+    text-align: center;
+    background-color: lightseagreen;
+}
+
+.prev-arrow-container, .year-month-selector, .next-arrow-container {
+    display: inline-block;
+}
+
+.prev-arrow-container {
+    width: 35px;
+    height: 35px;
+    background-image: url("left-right.png");
+    background-color: white;
+    background-size: 100% 100%;
+    margin-left: 5px;
+    margin-top: 17px;
+    float: left;
+    border-radius: 50%;
+}
+
+.next-arrow-container {
+    width: 35px;
+    height: 35px;
+    background-image: url("left-right.png");
+    background-color: white;
+    background-size: 100% 100%;
+    transform: rotate(180deg);
+    margin-right: 5px;
+    margin-top: 17px;
+    float: right;
+    border-radius: 50%;
+}
+
+.prev-arrow-container:hover, .next-arrow-container:hover {
+    background-color: lightgray;
+}
+
+.arrows {
+    text-decoration: none;
+}
+
+.year-month-selector {
+    margin: 0;
+    text-align: center;
+}
+
+.year-month-selector select {
+    margin-right: 100px;
+    width: 125px;
+    height: 27px;
+    font-size: 18px;
+    padding-left: 25px;
+    border: 1px solid white;
+    appearance: none;
+    -webkit-appearance: none;
+    background: url('arr.png') 100% / 30% no-repeat white;
+}
+
+.year-month-selector select:nth-child(2) {
+    margin-right: 0px;
+}
+
+.year-month-selector select:focus {
+    outline: none;
+}
+
+.opacity-class {
+    opacity: 0.1;
+}
+
+
+/*************************************** CALENDAR BODY ******************************************/
+
+.calendar-body {
+    display: block;
+    position: absolute;
+    height: 383px;
+    background-color: lightgrey;
+    transition: all .22s linear;
+}
+
+
+.day-names {
+    height: 25px;
+    line-height: 25px;
+    margin-bottom: 10px;
+}
+
+.day, .day-name {
+    display: inline-block;
+    text-align: center;
+    font-size: 18px;
+    width: 55px;
+    margin-right: 16.5px;
+    margin-top: 7px;
+    
+}
+
+.day-name:nth-child(1) {
+    margin-left: 8px;
+}
+
+.day-name:last-child {
+    margin-right: 0px;
+}
+
+.day {
+    background-color: white;
+    color: black;
+    width: 69.3px;
+    height: 67.4px;
+    line-height: 67.4px;
+    margin: 1.07px;
+    cursor: pointer;
+    transition: all .1s linear;
+}
+
+.day:hover {
+    color: white;
+    background-color: lightseagreen;
+}
+
+
+.highlightToday {
+    color: white;
+    background-color: lightseagreen;
+}
+
+
+.satColor {
+    color: blue;
+}
+
+.sunColor {
+    color: red;
+}
+
+
+/***************************************** POP-UPS **********************************************/
+
+.popUps {
+    position: relative;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 800px;
+    height: 400px;
+    margin: 0 auto;
+    border: 1px solid black;
+    background-color: aqua;
+}
+
+.pop-header {
+    background-color: lightseagreen;
+    height: 60px;
+}
+
+.pop-body {
+    background-color: lightgrey;
+    height: 250px;
+}
+
+.pop-bottom {
+    border-top: 2px solid white;
+    background-color: lightgrey;
+}
+
+.pop-up {
+    width: 100px;
+    height: 40px;
+    background-color: brown;
+}
+
+.makeBlock {
+    display: block;
+}
